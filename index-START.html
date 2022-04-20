@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <div class="keys">
+    <div id="keyA" data-key="65" class="key">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
+    </div>
+    <div id="keyS" data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div id="keyD" data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div id="keyF" data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div id="keyG" data-key="71" class="key">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div id="keyH" data-key="72" class="key">
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div id="keyJ" data-key="74" class="key">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div id="keyK" data-key="75" class="key">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div id="keyL" data-key="76" class="key">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+  </div>
+
+  <audio id="audio1" data-key="65" src="sounds/clap.wav"></audio>
+  <audio id="audio2" data-key="83" src="sounds/hihat.wav"></audio>
+  <audio id="audio3" data-key="68" src="sounds/kick.wav"></audio>
+  <audio id="audio4" data-key="70" src="sounds/openhat.wav"></audio>
+  <audio id="audio5" data-key="71" src="sounds/boom.wav"></audio>
+  <audio id="audio6" data-key="72" src="sounds/ride.wav"></audio>
+  <audio id="audio7" data-key="74" src="sounds/snare.wav"></audio>
+  <audio id="audio8" data-key="75" src="sounds/tom.wav"></audio>
+  <audio id="audio9" data-key="76" src="sounds/tink.wav"></audio>
+
+  <script>
+    // Variables //
+
+    const note1 = document.getElementById('audio1')
+    const Ak = document.getElementById('keyA')
+    const note2 = document.getElementById('audio2')
+    const Sk = document.getElementById('keyS')
+    const note3 = document.getElementById('audio3')
+    const Dk = document.getElementById('keyD')
+    const note4 = document.getElementById('audio4')
+    const Fk = document.getElementById('keyF')
+    const note5 = document.getElementById('audio5')
+    const Gk = document.getElementById('keyG')
+    const note6 = document.getElementById('audio6')
+    const Hk = document.getElementById('keyH')
+    const note7 = document.getElementById('audio7')
+    const Jk = document.getElementById('keyJ')
+    const note8 = document.getElementById('audio8')
+    const Kk = document.getElementById('keyK')
+    const note9 = document.getElementById('audio9')
+    const Lk = document.getElementById('keyL')
+
+    // Keys Events Function //
+
+    window.addEventListener("keypress", e => {
+      //console.log(e.keyCode)
+      if (e.keyCode === 97) {
+        note1.play()
+        Ak.classList.add("playing")
+        setTimeout(() => {
+          Ak.classList.remove("playing");
+        }, 200);
+      } else if (e.keyCode === 115) {
+        note2.play()
+        Sk.classList.add("playing")
+        setTimeout(() => {
+          Sk.classList.remove("playing");
+        }, 200);
+      } else if (e.keyCode === 100) {
+        note3.play()
+        Dk.classList.add("playing")
+        setTimeout(() => {
+          Dk.classList.remove("playing");
+        }, 200);
+      } else if (e.keyCode === 102) {
+        note4.play()
+        Fk.classList.add("playing")
+        setTimeout(() => {
+          Fk.classList.remove("playing");
+        }, 200);
+      } else if (e.keyCode === 103) {
+        note5.play()
+        Gk.classList.add("playing")
+        setTimeout(() => {
+          Gk.classList.remove("playing");
+        }, 200);
+      } else if (e.keyCode === 104) {
+        note6.play()
+        Hk.classList.add("playing")
+        setTimeout(() => {
+          Hk.classList.remove("playing");
+        }, 200);
+      } else if (e.keyCode === 106) {
+        note7.play()
+        Jk.classList.add("playing")
+        setTimeout(() => {
+          Jk.classList.remove("playing");
+        }, 200);
+      } else if (e.keyCode === 107) {
+        note8.play()
+        Kk.classList.add("playing")
+        setTimeout(() => {
+          Kk.classList.remove("playing");
+        }, 200);
+      } else if (e.keyCode === 108) {
+        note9.play()
+       Lk.classList.add("playing")
+        setTimeout(() => {
+          Lk.classList.remove("playing");
+        }, 200);
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>
